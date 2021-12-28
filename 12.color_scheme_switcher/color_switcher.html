@@ -33,6 +33,7 @@
            border: 2px solid black;
            margin-right: 10px;
            border-radius: 50%;
+           /* float: left; */
        }
        .col1{
            background-color: whitesmoke;
@@ -58,6 +59,9 @@
             <p class="col2"></p>
             <p class="col3"></p>
             <p class="col4"></p>
+                <label for="color">Choose any color : </label>
+                <input type="color" name="color" id="color">
+
         </div>
         <h3>Try Clicking on the colors above to change the color on page! </h3>
     </main>
@@ -78,6 +82,12 @@
         document.querySelector(".col4").addEventListener("click",()=>{
             document.querySelector("body").style.backgroundColor = "blue"
             document.querySelector("body").style.color = "white"
+        })
+        
+        document.querySelector("#color").addEventListener("click",()=>{
+            document.querySelector("body").style.backgroundColor = document.querySelector("#color").value;
+            document.querySelector("body").style.color = "white"
+            
         })
     </script>
 </body>
